@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('no_telepon');
             $table->string('sim');
             $table->string('password');
+            $table->string('role')->default('pelanggan');
             $table->timestamps();
         });
     }

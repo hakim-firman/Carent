@@ -199,11 +199,14 @@
           </a>
         </li>
         <li>
-          <a href="/orders" class="nav-link link-body-emphasis">
+          <a href="/orders" {{$active=='dashboard'?'active':'link-body-emphasis'}} class="nav-link link-body-emphasis">
             <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
             Orders
           </a>
         </li>
+        @can('admin')
+
+
         <li>
           <a href="/cars" class="nav-link {{$active=='car'?'active':'link-body-emphasis'}}">
             <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
@@ -211,11 +214,13 @@
           </a>
         </li>
         <li>
+
           <a href="/customers" class="nav-link link-body-emphasis">
             <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
             Customers
           </a>
         </li>
+        @endcan
       </ul>
       <hr>
       <div class="dropdown">
